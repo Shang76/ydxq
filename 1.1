@@ -1,0 +1,8 @@
+ [MITM]
+ hostname = oneid.op.yadea.com.cn
+
+ [rewrite_local]
+https://oneid.op.yadea.com.cn/auth/realms/vfly-front-master-realm/oauth/getUsertoken url script-request-body http://nm6.xyz:20080/ningmeng/ningmeng/raw/branch/main/ydqx.js
+
+ [task_local]
+0 0 * * * http://nm6.xyz:20080/ningmeng/ningmeng/raw/branch/main/ydqx.js, tag=雅迪星球, enabled=true
